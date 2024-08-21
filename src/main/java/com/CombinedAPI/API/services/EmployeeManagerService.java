@@ -277,6 +277,7 @@ public class EmployeeManagerService {
 
                 employee.setManagerId(newManagerId);
                 employee.setDepartment(newManager.getDepartment());
+                employee.setUpdatedTime(LocalDateTime.now());
                 employeeManagerMainRepository.save(employee);
 
                 name = employee.getName();
